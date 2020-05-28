@@ -1,0 +1,15 @@
+<div class="body">
+  <div *ngFor="let item of record" class="row">
+    <div  *ngFor="let square of item.rowArray" class="square">
+        <img *ngIf="square.foodPresence "  width="25px" height="25px" src="../assets/food.jpg" alt="f">
+        <img *ngIf="square.marioPresence" width="25px" height="25px" src="../assets/mario.png" alt="m">
+    </div>
+  </div>
+  <div style="margin-top:20px">
+    food Remains {{food}}
+
+  </div>
+  <div *ngIf="food==0">
+   total step {{step}}
+  </div>
+</div>
